@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:paddingLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingRight="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_white_black_24dp"
+            />
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_new_task"
+            android:paddingLeft="@dimen/margin_large"
+            android:textColor="@color/color_full_white"
+            android:textSize="@dimen/text_regular_2x"
+            android:layout_weight="2"/>
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_save"
+            android:textColor="@color/green"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_regular_2x"
+            android:gravity="right"/>
+    </LinearLayout>
+
+    <org.mmtextview.components.MMTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLIENT"
+        android:paddingLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:textColor="@color/light_grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small">
+
+        <com.padcmyanmar.component_view_assign_accp.views.components.CircleImage
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:imgCircleradius="40dp"
+            app:srcCompat="@drawable/profile5"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="2"
+            android:lineHeight="2dp"
+            android:layout_marginStart="@dimen/margin_large"
+            android:textColor="@color/color_full_white"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:entries="@array/newTask"
+            android:layout_marginStart="@dimen/margin_xlarge_n"/>
+
+    </LinearLayout>
+    <org.mmtextview.components.MMTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_project_name"
+        android:paddingLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:textColor="@color/light_grey"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edProjectName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:textColor="@color/color_full_white"/>
+
+    <org.mmtextview.components.MMTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROJECT NAME"
+        android:paddingLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:textColor="@color/light_grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_medium"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:src="@drawable/ic_date_range_black_24dp"/>
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/date"
+                android:layout_toEndOf="@+id/ivCalendar"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCalendar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/date"
+                android:layout_toEndOf="@id/ivCalendar1"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <org.mmtextview.components.MMTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_assignee"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:textColor="@color/light_grey"
+        android:paddingLeft="@dimen/margin_medium"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_image_view"/>
+
+    <org.mmtextview.components.MMTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_category"
+        android:paddingLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:textColor="@color/light_grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:paddingLeft="@dimen/margin_medium"
+        android:paddingRight="@dimen/margin_medium">
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/btndesign"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_design"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:checkable="true"
+                android:textColor="@color/black"
+                app:chipBackgroundColor="@color/green"
+                app:chipCornerRadius="10dp"
+                android:layout_marginStart="@dimen/margin_medium"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/btnfrontend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="@string/tv_fronted"
+                app:chipCornerRadius="10dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                app:chipBackgroundColor="@color/green"
+                android:layout_marginStart="@dimen/margin_medium"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/backend"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_backend"
+                android:layout_weight="1"
+                android:checkable="true"
+                android:clickable="true"
+                app:chipCornerRadius="10dp"
+                app:chipBackgroundColor="@color/green"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/margin_medium"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_radius"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:backgroundTint="@color/color_full_white">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:paddingLeft="@dimen/margin_medium"
+                    android:orientation="horizontal">
+
+                        <org.mmtextview.components.MMTextView
+                            android:id="@+id/description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xlarge"
+                            android:text="Description"
+                            android:layout_weight="1.8"
+                            android:textStyle="bold"
+                            android:layout_marginStart="@dimen/margin_medium"
+                            android:textColor="@color/black" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/btn_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_attach_file_black_24dp"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_weight="0.2"
+                        android:clickable="true"
+                        android:backgroundTint="@color/color_full_white"/>
+                </LinearLayout>
+
+                <org.mmtextview.components.MMTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_attachment"
+                    android:paddingLeft="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:paddingLeft="@dimen/margin_medium">
+
+                    <com.padcmyanmar.component_view_assign_accp.views.components.CircleImage
+                        android:id="@+id/ivimage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:imgCircleradius="40dp"
+                        android:layout_weight="0.2"
+                        app:srcCompat="@drawable/profile5"
+                        android:layout_marginTop="@dimen/margin_xlarge"/>
+
+                    <com.padcmyanmar.component_view_assign_accp.views.components.LineProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="@dimen/margin_xlarge"
+                        android:layout_weight="2.6"
+                        android:inputType="text"
+                        app:longBarheight="25dp"
+                        app:reference="Reference_1"
+                        app:kb="168KB"
+                        app:reachedColor="@color/green"
+                        app:unReachedLongColor="@color/light_grey"
+                        android:textColor="@color/black" />
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/btn_cross"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:src="@drawable/ic_close_black_24dp"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:backgroundTint="@color/color_full_white"/>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_create_task"
+                    android:textColor="@color/color_full_white"
+                    android:backgroundTint="@color/green"
+                    app:cornerRadius="20dp"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_margin="@dimen/margin_large"/>
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImage">
+        <attr name="imgCircleradius" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="CircleProgressBar">
+        <attr name="percent" format="float"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="circleProgessColor" format="color"/>
+        <attr name="goalReachedColor" format="color"/>
+        <attr name="unReachedColor" format="color"/>
+        <attr name="borderWidth" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="LineProgressBar">
+        <attr name="reachedColor" format="color"/>
+        <attr name="unReachedLongColor" format="color"/>
+        <attr name="longBorderWidth" format="dimension"/>
+        <attr name="longBarheight" format="dimension"/>
+        <attr name="reference" format="string"/>
+        <attr name="kb" format="string"></attr>
+    </declare-styleable>
+
+</resources>

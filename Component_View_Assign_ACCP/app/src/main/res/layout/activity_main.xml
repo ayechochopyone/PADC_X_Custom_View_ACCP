@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:theme="@style/AppTheme.NoActionBar">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_card_medium_2_n"
+                    android:backgroundTint="@color/color_full_white"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+
+                <TextView
+                    android:id="@+id/dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/btn_back"
+                    android:text="@string/tv_dashboard"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/margin_medium"/>
+
+                <org.mmtextview.components.MMButton
+                    android:id="@+id/btn_progress"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_toEndOf="@id/dashboard"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:backgroundTint="@color/holo_orange"
+                    android:text="In Progress"
+                    android:textColor="@color/color_full_white"
+                    app:cornerRadius="@dimen/margin_xxlarge" />
+
+                <TextView
+                    android:id="@+id/pages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_progress"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/tv_pages"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_heading_2x"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_progress"
+                    tools:layout_editor_absoluteX="4dp" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pages"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="03 days | Dec 18, 2019"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pages" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvImageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/date"
+                        tools:listitem="@layout/item_image_view"/>
+
+
+                <com.padcmyanmar.component_view_assign_accp.views.components.CircleProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/date"
+                    app:percent="85.0"
+                    app:borderWidth="10dp"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    app:goalReachedColor="@color/holo_orange"
+                    android:layout_marginTop="@dimen/margin_medium"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rvlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_radius"
+        android:backgroundTint="@color/light_grey"
+        android:padding="@dimen/margin_medium"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:text="@string/tv_tasks"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:entries="@array/day" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/spinner"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            tools:listitem="@layout/item_tasks" />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

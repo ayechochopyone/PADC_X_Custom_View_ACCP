@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Component_View_Assign_ACCP</string>
+    <string name="tv_dashboard">OMP Dashboard</string>
+    <string name="tv_pages">Create additional pages</string>
+    <string name="tv_tasks">Tasks</string>
+    <string name="tv_show_day">Show in days</string>
+    <string name="tv_progress">In progress</string>
+    <string name="tv_design">Design</string>
+    <string name="tv_page">Contact page</string>
+    <string name="tv_3">3</string>
+    <string name="tv_5">5</string>
+    <string name="tv_close_tasks">Closed tasks</string>
+    <string name="tv_open_tasks">Open tasks</string>
+    <string name="tv_task_name">UI Design</string>
+    <string name="profile_name">Zachary Bulter</string>
+    <string name="tv_message">Message</string>
+    <string name="tv_hr">3hr</string>
+    <string name="tv_contacts">Contacts</string>
+    <string name="tv_about">About You</string>
+    <string name="tv_save">Save</string>
+    <string name="tv_new_task">A Create New Task</string>
+    <string name="tv_assignee">ASSIGNEE</string>
+    <string name="tv_project_name">PROJECT NAME</string>
+    <string name="tv_category">CATEGORY</string>
+    <string name="tv_fronted">Frontend</string>
+    <string name="tv_backend">Backend</string>
+    <string name="tv_attachment">ATTACHMENTS</string>
+    <string name="btn_create_task">Create task</string>
+
+    <string-array name="day">
+        <item >Show in days</item>
+        <item>Show in date</item>
+    </string-array>
+
+    <string-array name="newTask">
+        <item>Awsmd Team</item>
+        <item>Project Team</item>
+    </string-array>
+
+    <string-array name="date">
+        <item>Dec 14, 2019</item>
+        <item>Dec 14, 2019</item>
+        <item>Dec 14, 2019</item>
+        <item>Dec 14, 2019</item>
+        <item>Dec 14, 2019</item>
+    </string-array>
+
+    <string name="reference">Reference-1</string>
+</resources>

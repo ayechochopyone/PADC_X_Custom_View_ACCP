@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padcmyanmar.component_view_assign_accp.views.viewpods.ProfileViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/color_full_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_xlarge">
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_close_tasks"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_weight="1"/>
+                <org.mmtextview.components.MMTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="361"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <com.padcmyanmar.component_view_assign_accp.views.components.CircleImage
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/profile3"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                app:imgCircleradius="50dp"/>
+
+            <com.padcmyanmar.component_view_assign_accp.views.components.CircleImage
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:imgCircleradius="10dp"
+                app:srcCompat="@color/holo_orange"
+                android:layout_marginTop="@dimen/door_lock_width"
+                android:layout_marginStart="@dimen/margin_card_medium_2_n"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:weightSum="1"
+                android:orientation="vertical">
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_open_tasks"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_weight="1"/>
+                <org.mmtextview.components.MMTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/profile_name"
+        android:textSize="@dimen/text_heading_2x"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tvRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/tv_task_name"
+        android:textSize="@dimen/text_regular_3x"/>
+
+</com.padcmyanmar.component_view_assign_accp.views.viewpods.ProfileViewPod>

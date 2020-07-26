@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/profile_screen"
+    android:background="@color/profile_screen_bg"
+    app:behavior_peekHeight="0dp"
+    app:behavior_hideable="false"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/margin_medium"
+        android:backgroundTint="@color/color_full_white"
+        android:src="@drawable/ic_close_black_24dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/door_lock_margin_left"
+        android:background="@drawable/border_radius"
+        android:backgroundTint="@color/color_full_white"
+        android:orientation="vertical">
+        <include
+            layout="@layout/view_pod_profile"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share_black_24dp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:clickable="true"
+                android:backgroundTint="@color/color_full_white"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_message"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:backgroundTint="#009688"
+                android:clickable="true"
+                app:cornerRadius="10dp"
+                android:textColor="@color/color_full_white"
+                android:layout_marginStart="@dimen/margin_xlarge"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_assignment_black_24dp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:clickable="true"
+                android:backgroundTint="@color/color_full_white"/>
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                app:tabMode="fixed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+</LinearLayout>

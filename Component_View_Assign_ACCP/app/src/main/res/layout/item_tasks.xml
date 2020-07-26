@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin = "@dimen/margin_medium"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium">
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_progress"
+            android:textColor="@color/holo_orange"/>
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/design"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_design"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/margin_medium"/>
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/contactPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_page"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/black"
+            android:layout_below="@id/progress"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_message_black_24dp"
+            android:layout_below="@+id/contactPage"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/message3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_3"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_below="@id/contactPage"
+            android:layout_toEndOf="@id/ivMessage"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_attach_file_black_24dp"
+            android:layout_toEndOf="@id/message3"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_below="@id/contactPage"/>
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_5"
+            android:layout_toEndOf="@id/file"
+            android:layout_below="@id/contactPage"
+            android:layout_marginTop="@dimen/margin_medium"
+            />
+
+        <com.padcmyanmar.component_view_assign_accp.views.components.CircleImage
+            android:id="@+id/profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/contactPage"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:scaleType="centerCrop"
+            app:imgCircleradius="20dp"
+            app:srcCompat="@drawable/profile3" />
+
+        <org.mmtextview.components.MMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="163"
+            android:textColor="@color/black"
+            android:layout_below="@id/contactPage"
+            android:layout_toLeftOf="@id/profile"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
